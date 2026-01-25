@@ -1,6 +1,7 @@
 import cv2
 import matplotlib.pyplot as plt
 import numpy as np
+from ipl import ImageProcessor as ip
 
 image = cv2.imread('../data/raw/Apple/Fresh/apple_fresh_001.jpg (1).jpg')
 
@@ -11,6 +12,6 @@ height = image.shape[0]
 aspect_ratio = wight / height
 plt.figure(figsize=(5*aspect_ratio, 5))
 plt.title("Grayscale Image")
-cv2.imshow(image_gray)
+plt.imshow(image_gray, cmap='gray')
 plt.show()
 
